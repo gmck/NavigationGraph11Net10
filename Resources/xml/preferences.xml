@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<androidx.preference.PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+	<androidx.preference.PreferenceCategory
+		app:iconSpaceReserved="false"
+		android:key="general"
+		android:title ="@string/generalCategoryTitle">
+
+		<com.companyname.navigationgraph11net10.ColorThemeListPreference
+			app:iconSpaceReserved="false"
+			android:key="colorThemeValue"
+			android:defaultValue="3"
+			android:title ="@string/colorThemeListPreferenceTitle"
+			android:dialogTitle ="@string/colorThemeListPreferenceDialogTitle"
+			android:summary ="@string/colorThemeListPreferenceSummary"/>
+
+		<androidx.preference.CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:defaultValue ="false"
+			android:key ="use_dynamic_colors"
+			android:title ="@string/use_dynamic_colors"
+			android:summary ="@string/use_dynamic_colors_summary"/>
+
+		<androidx.preference.CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:defaultValue ="false"
+			android:key ="retain_vehicle_images"
+			android:title ="@string/retain_vehicle_images"
+			android:summary ="@string/retain_vehicle_images_summary"/>
+
+		<com.companyname.navigationgraph11net10.SystemThemeListPreference
+			app:iconSpaceReserved="false"
+			android:key="systemThemeValue"
+			android:defaultValue="1"
+			android:title ="@string/systemThemeListPreferenceTitle"
+			android:dialogTitle ="@string/systemThemeListPreferenceDialogTitle"
+			android:summary ="@string/systemThemeListPreferenceSummary"/>
+
+		<androidx.preference.CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:defaultValue="false"
+			android:key="darkTheme"
+			android:summary="@string/use_dark_theme_summary"
+			android:title="@string/use_dark_theme" />
+
+		<!--INSERT HERE RaceResultFragment background color-->
+		<!--GaugeBackgroundListPreference-->
+		<com.companyname.navigationgraph11net10.RaceResultFragmentListPreference  
+			app:iconSpaceReserved="false"
+			android:key="backgroundDisplayType"
+			android:defaultValue="1"
+			android:title ="@string/raceResultFragmentListPreferenceTitle"
+			android:dialogTitle ="@string/raceResultFragmentListPreferenceDialogTitle"
+			android:summary ="@string/raceResultFragmentListPreferenceSummary"/>
+
+
+	<androidx.preference.CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:defaultValue ="false"
+			android:key ="use_animations"
+			android:title ="@string/use_animations"
+			android:summary ="@string/use_animations_summary"/>
+
+		<androidx.preference.CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:defaultValue ="false"
+			android:key ="useViewPagerAnimations"
+			android:title ="@string/animateViewPagerTitle"
+			android:summary ="@string/animateViewPagerSummary"/>
+
+		<androidx.preference.CheckBoxPreference
+		  app:iconSpaceReserved="false"
+		  android:defaultValue="true"
+		  android:key="displayPageIndicator"
+		  android:summary="@string/displayPageIndicatorValueSummary"
+		  android:title="@string/displayPageIndicatorValueTitle" />
+
+		<androidx.preference.CheckBoxPreference
+		  app:iconSpaceReserved="false"
+		  android:defaultValue="false"
+		  android:key="showSubscriptionInfo"
+		  android:summary="@string/showSubscriptionMenuItemSummary"
+		  android:title="@string/showSubscriptionMenuItemTitle" />
+
+		<androidx.preference.CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:defaultValue ="false"
+			android:key ="helper_screens"
+			android:title ="@string/reset_helper_screens"
+			android:summary ="@string/reset_helper_screens_summary"/>
+	</androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

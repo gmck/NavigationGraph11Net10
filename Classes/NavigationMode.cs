@@ -1,0 +1,45 @@
+﻿using AndroidX.Core.View;
+
+namespace com.companyname.navigationgraph11net10.Classes
+{
+    public static class NavigationMode
+    {
+        //Links to edge-to-edge articles and documentation
+
+        // https://medium.com/androiddevelopers/insets-handling-tips-for-android-15s-edge-to-edge-enforcement-872774e8839b#:~:text=Android%2015%20enforces%20edge%2Dto,Android%2015%20and%20later%20devices.
+        // https://developer.android.com/about/versions/15/behavior-changes-15#edge-to-edge
+        // https://developer.android.com/develop/ui/views/layout/edge-to-edge
+        // https://developer.android.com/codelabs/edge-to-edge#3
+
+        public static bool IsGestureNavigation(WindowInsetsCompat? insets)
+        {
+            // Determine if using Gesture navigation
+
+            // Notes: Without this check etc - prior to API 35, we would just adjust the recyclerview with systemBarInserts.Bottom + initialPaddingBottom.
+            // However, that caused bizarre behaviour when closing this fragment with a back gesture to close the fragment. When closing a fragment, OnApplyWindowsInsets is called again,
+            // and this time systemBarInsets.Left and SystemBarInsets.Right have positive values, therefore without accounting for them, the back gesture was non - reversible,
+            // and the recyclerview disappeared, leaving the header of the recyclerview, requiring a another swipe to close the fragment, including the header of the recyclerview.
+            // Therefore, this method and the new replacement code are needed in the OnApplyWindowInsets(..).
+            // Comment the if/else lines and uncomment the single v.Padding() line to see the effect. Note - this didn't affect the closing of the fragment when using 3-button navigation.
+
+            AndroidX.Core.Graphics.Insets? systemBarsInsets = insets!.GetInsets(WindowInsetsCompat.Type.SystemBars());
+            return systemBarsInsets!.Bottom != 0;
+        }
+
+        # region Alternate IsGestureNavigationMode(WindowInsetsCompat insets)
+        //private static bool IsGestureNavigationMode(WindowInsetsCompat insets) // Not using, but works.
+        //{
+        //    // This came from https://stackoverflow.com/questions/56689210/how-to-detect-full-screen-gesture-mode-in-android-10/60733427#60733427
+        //    // See the commented Android code outside of the final } Also works, but more complex. 
+
+        //    AndroidX.Core.Graphics.Insets systemGesturesInsets = insets.GetInsetsIgnoringVisibility(WindowInsetsCompat.Type.SystemGestures());
+        //    AndroidX.Core.Graphics.Insets navigationBarsInsets = insets.GetInsetsIgnoringVisibility(WindowInsetsCompat.Type.NavigationBars());
+
+        //    bool hasSystemGestureHorizontalInset = systemGesturesInsets.Left > 0 || systemGesturesInsets.Right > 0;
+        //    bool hasNavigationBarHorizontalInset = navigationBarsInsets.Left > 0 || navigationBarsInsets.Right > 0;
+
+        //    return hasSystemGestureHorizontalInset && !hasNavigationBarHorizontalInset;
+        //}
+        #endregion
+    }
+}

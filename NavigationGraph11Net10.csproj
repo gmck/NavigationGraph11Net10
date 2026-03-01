@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-android36.1</TargetFramework>
+		<SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<ApplicationId>com.companyname.NavigationGraph11Net10</ApplicationId>
+		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<RootNamespace>com.companyname.navigationgraph11net10</RootNamespace>
+		<RuntimeIdentifiers Condition=" '$(Configuration)' == 'Release' ">android-arm64</RuntimeIdentifiers>
+		<!--
+			Enables trim analyzers and full trimming during Release mode.
+			To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/trimming-options#trimming-granularity
+		-->
+		<TrimMode>full</TrimMode>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Include=".github\copilot-instructions.md" />
+	</ItemGroup>
+
+	<!--
+			ABI reference chart (keep in project files for quick reference)
+
+			Android ABI        Description           .NET for Android RID		
+			armeabi-v7a        32-bit ARM           android-arm
+			arm64-v8a          64-bit ARM           android-arm64
+			x86                32-bit Intel/AMD     android-x86
+			x86_64             64-bit Intel/AMD     android-x64
+
+			Notes & recommendations:
+			- Google Play requires 64-bit native code for apps that include native libraries.
+			- For modern phones and smaller app size: prefer android-arm64 for Release.
+			- Keep android-x86 for Debug if you want emulator builds (emulators do NOT support Bluetooth — use a physical device for Bluetooth testing).
+			- Raise __SupportedOSPlatformVersion__ to 29 (Android 10) if you want to drop older devices and simplify maintenance.
+			- To change compile target to API 36, set __TargetFramework__ to net9.0-android36 and install Android SDK Platform 36.
+		-->
+
+
+	<ItemGroup>
+		<!--
+		These packages build fine see issue #10700 for the commented packages below.
+		"See The command line for R8 Tasks is too long. Command lines longer than 32000 chars are likely to fail"
+		-->
+
+		<!--<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.1.1" />
+		<PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.9.6" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.9.6" />
+		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.1.15" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.6" />-->
+
+		<!-- 
+		These new packages below don't issue #10700 if the extra Excludes are included - Comment below to see the error
+		-->
+
+		
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.1.2" />
+		<PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.9.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.9.6.1" />
+		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.1.16" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.6" />
+		
+		<!--Exclude duplicate JVM packages to resolve D8 compilation conflicts with Android variants-->
+		<PackageReference Include="Xamarin.AndroidX.Compose.Runtime.Annotation.Jvm" Version="1.10.0.1" ExcludeAssets="all" />
+		
+	</ItemGroup>
+</Project>
