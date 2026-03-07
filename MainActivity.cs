@@ -92,9 +92,6 @@ namespace com.companyname.navigationgraph11net10
             int[] topLevelDestinationIds = [Resource.Id.home_fragment, Resource.Id.gallery_fragment, Resource.Id.books_fragment, Resource.Id.slideshow_fragment, Resource.Id.widgets_fragment, Resource.Id.purchase_fragment];
             appBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinationIds).SetOpenableLayout(drawerLayout).Build();  // SetDrawerLayout replaced with SetOpenableLayout
 
-            // The following fragments are immersive fragments - see SetShortEdgesIfRequired
-            //immersiveFragmentsDestinationIds = [Resource.Id.race_result_fragment];
-
             NavigationUI.SetupActionBarWithNavController(this, navController, appBarConfiguration);
 
             navigationView!.SetNavigationItemSelectedListener(this);

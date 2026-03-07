@@ -149,7 +149,8 @@ namespace com.companyname.navigationgraph11net10.Fragments
         private List<Book> GetBooks()
         {
             // A random assortment of books to demonstrate a RecyclerView
-            return books = [
+            return books =
+            [
                 new("The Secrets She Keeps", "Michael", "Robotham", "2017"),
                 new("Say You're Sorry", "Michael", "Robotham",  "2012"),
                 new("When She Was Good", "Michael", "Robotham", "2020"),

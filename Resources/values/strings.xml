@@ -201,7 +201,8 @@
 	<string name ="about_dialog_android_version">Android OS Version:</string>
 	<string name ="about_dialog_targetVersion">Target API Version:</string>
 	<string name ="about_dialog_support">Support:</string>
+	<string name ="about_dialog_security_patch_name">Security Patch</string>
 	<string name ="about_dialog_support_details">https://github.com/gmck/NavigationGraph11Net10</string>
-	<string name ="build_date">Feb 23, 2026 - Net10</string>
+	<string name ="build_date">Mar 7, 2026 - net10</string>
 	<!--About Dialog-->
 </resources>

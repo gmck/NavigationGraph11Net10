@@ -1,9 +1,11 @@
-﻿**05/03/2026**
-Build 1.1 
+﻿**07/03/2026**
+Build 1.2 
 
 Added the Dynamic Colour Theme feature.
-This includes the screenshots below. The images created a problem in that since they are not part of the project 
+This includes the screenshots below. Note: The images created a problem in that since they are not part of the project 
 as per the csprog file, when you need to update them you also need to close and reopen the solution to see any changes you make.
+
+Modified the AboutDialogFragment to have Android36.1 features same as my production app. Modified the xml of about_dialog.xml.
 
 **01/03/2026**
 

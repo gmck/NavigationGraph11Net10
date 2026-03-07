@@ -6,8 +6,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<ApplicationId>com.companyname.NavigationGraph11Net10</ApplicationId>
-		<ApplicationVersion>11</ApplicationVersion>
-		<ApplicationDisplayVersion>1.1</ApplicationDisplayVersion>
+		<ApplicationVersion>12</ApplicationVersion>
+		<ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
 		<RootNamespace>com.companyname.navigationgraph11net10</RootNamespace>
 		<RuntimeIdentifiers Condition=" '$(Configuration)' == 'Release' ">android-arm64</RuntimeIdentifiers>
 		<!--
@@ -52,7 +52,7 @@
 		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.6" />-->
 
 		<!-- 
-		These new packages below don't issue #10700 if the extra Excludes are included - Comment below to see the error
+		These new packages below don't issue #10700 if the extra Exclude is included - Comment below to see the error
 		-->
 
 		
