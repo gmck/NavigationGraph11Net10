@@ -6,7 +6,7 @@ The warnings relate to Google Play Console's message  **Your app uses deprecated
 I should state that neither of these apps has been uploaded to GPC, as that is not very practical for a test project, but I have uploaded my production version apps (``android10-android36.1``) 
 many times since Sept 1, 2025, which also produces the same warnings. 
 
-In my case, it is only two warnings re using ``SetStatusBarColor`` and ``SetNavigationBarColor``. However, there were many more initially and can be many more, for example, "SetDecorFitsSystemWindows()``. 
+In my case, it is only two warnings re using ``SetStatusBarColor`` and ``SetNavigationBarColor``. However, there were many more initially and can be many more, for example, ``SetDecorFitsSystemWindows()``. 
 
 Please see https://github.com/dotnet/android/issues/10304 for the explantion.
 
@@ -142,7 +142,7 @@ This is then repeated for the Red BMW and the Green BMW themes.
 The RaceResultFragment is a fully immersive fragment. We have modified it in this version as compared to the NavigationGraph9Net9 project. It now defaults to using a carbon fibre background, 
 which can be changed to either a dark or light background via the preference **Choose background colour for ResultRaceResultFragment.** The carbon fibre background is a bit more interesting than 
 the plain black or white backgrounds and highlights the immersive fragment by making it very obvious that the background extends into the camera cutout area or notch which emphasises the Edge-To-Edge 
-effect. We use it our published apps to show 3D like automtive gauges using the SkiaSharp.Views library to draw the gauges. To make any fragment fully immersive, all you need to do is inherit 
+effect. We use it our published apps to show 3D like automotive gauges using the SkiaSharp.Views library to draw the gauges. To make any fragment fully immersive, all you need to do is inherit 
 from ImmersiveFragment.
 
 **Android36.1 Features**
