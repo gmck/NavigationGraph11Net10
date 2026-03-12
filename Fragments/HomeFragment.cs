@@ -108,27 +108,6 @@ namespace com.companyname.navigationgraph11net10.Fragments
             {
                 case Resource.Id.action_settings:
 
-                    //Requirement for Android 12+ before Navigatating to the SettingsFragment from the HomeFragment, we need the following Permissions Manifest.Permission.BluetoothConnect and Manifest.Permission.BluetoothScan. Therefore we need an something like activityResultLauncher = RegisterForActivityResult(new ActivityResultContracts.RequestMultiplePermissions())
-                    //we need something like the followowing
-
-                    //if (Build.VERSION.SdkInt >= BuildVersionCodes.S)
-                    //{
-                    //    if (BluetoothPermissionsGranted())
-                    //        Navigation.FindNavController(Activity!, Resource.Id.nav_host).Navigate(Resource.Id.settingsFragment, null, navOptions);
-                    //    else
-                    //        bluetoothPermissionLauncher!.Launch(new string[] { Android.Manifest.Permission.BluetoothConnect, Android.Manifest.Permission.BluetoothScan });
-                    //}
-                    //else
-                    //    Navigation.FindNavController(Activity!, Resource.Id.nav_host).Navigate(Resource.Id.settingsFragment, null, navOptions);
-
-
-                    // This works for now but it is not the correct way to do it. The correct way is to use the activityResultLauncher = RegisterForActivityResult(new ActivityResultContracts.RequestMultiplePermissions())
-                    // and then use the bluetoothPermissionLauncher.Launch(new string[] { Manifest.Permission.BluetoothConnect, Manifest.Permission.BluetoothScan });
-
-                    // When the app starts for the very first time, the user wont have already given the Bluetooth permissions, therefore permissionsGranted will be false and we will have to request permissions from here.
-                    // When the request Permissions dialog appears, the user answer is received (collected) in the MainActivity's OnRequestPermissionsResult method. From there if the user has granted permissions
-                    // the code there will navigate directly to the SettingsFragment. In all other instances permissionsGranted will be true and therefore we will navigate to the SettingsFragment from here. 
-
                     if (OperatingSystem.IsAndroidVersionAtLeast(31))
                     {
                         if (BluetoothPermissionsGranted())

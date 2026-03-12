@@ -77,11 +77,6 @@ namespace com.companyname.navigationgraph11net10.Dialogs
                     new AndroidVersions("Android 16.1",  "BAKLAVA_1",        "Baklava_1",            "Api 36.1")
                 ];
 
-            // When built with 36.1, not getting 37.0 devices to show as 37.0, they are showing as 36.1
-            // - wait until we are actually building with 37. We are getting the correct security patch though.
-            // same applies on the Pixel 6 which is Android 17.
-            // AndroidVersions("Android 17",    "CINNAMONBUN",      "CinnamonBun",          "Api 37.0")
-
             // Security patch (ISO date, e.g. "2025-12-05"), optional
             string? securityPatch = Build.VERSION.SecurityPatch;
             string? securityPatchDisplay = !string.IsNullOrEmpty(securityPatch) ? securityPatch : "Unknown";  // 2025-12-05 or unknown

@@ -81,31 +81,31 @@
 	<string name ="systemThemeListPreferenceSummary">For Android 10,11 use the Quick Settings Dark Theme button. Please see our help manual for a full discussion of this feature.</string>
 
 	<string name="use_animations">Use Screen animations</string>
-	<string name="use_animations_summary">Animate the transition from one screen to another of all the screens associated with the side menu</string>
+	<string name="use_animations_summary">Animate the transition from one screen to another of all the screens associated with the navigation drawer menu.</string>
 
 	<string name="use_dynamic_colors">Use Dynamic Colours</string>
-	<string name="use_dynamic_colors_summary">Android 12 and above only - use theme colours based on your wallpaper - may clash with Menu images</string>
+	<string name="use_dynamic_colors_summary">Android 12 and above only - use theme colours based on your wallpaper - may clash with Menu images.</string>
 
 	<string name="retain_vehicle_images">Retain vehicle images while using Dynamic Colour Theme</string>
-	<string name="retain_vehicle_images_summary">If your wallpaper colour is similiar to our standard themes - retain vehicle images while using Dynamic Colours. See our help file for more details</string>
+	<string name="retain_vehicle_images_summary">If your wallpaper colour is similiar to our standard themes - retain vehicle images while using Dynamic Colours. See our help file for more details.</string>
 
 	<string name="use_transparent_statusbar">Use transparent Status Bar</string>
-	<string name="use_transparent_statusbar_summary">Android 14 and below. Menu appears to slide under StatusBar. Android 15+ always transparent</string>
+	<string name="use_transparent_statusbar_summary">Android 14 and below. Menu appears to slide under StatusBar. Android 15+ always transparent.</string>
 
 
 	
 
 	<string name ="displayPageIndicatorValueTitle">Display circular page indicator</string>
-	<string name ="displayPageIndicatorValueSummary">Display circular page indicator on the ViewPager</string>
+	<string name ="displayPageIndicatorValueSummary">Display circular page indicator on the ViewPager.</string>
 
 	<string name ="animateViewPagerTitle">Use ViewPager transitions</string>
-	<string name ="animateViewPagerSummary">Animate the transition when swiping from one page to another</string>
+	<string name ="animateViewPagerSummary">Animate the transition when swiping from one page to another.</string>
 
 	<string name ="showSubscriptionMenuItemTitle">Subscription Menu Item</string>
-	<string name ="showSubscriptionMenuItemSummary">If checked the Subscription Menu Item is enabled in the menu</string>
+	<string name ="showSubscriptionMenuItemSummary">If checked the Subscription Menu Item is enabled in the menu.</string>
 
 	<string name="reset_helper_screens">Reset Helper Explanation Dialog</string>
-	<string name="reset_helper_screens_summary">Check to reset the Helper Explanation Dialog to show again</string>
+	<string name="reset_helper_screens_summary">Check to reset the Helper Explanation Dialog to show again.</string>
 
 
 	<!--Preferences.xml-->
@@ -203,6 +203,6 @@
 	<string name ="about_dialog_support">Support:</string>
 	<string name ="about_dialog_security_patch_name">Security Patch</string>
 	<string name ="about_dialog_support_details">https://github.com/gmck/NavigationGraph11Net10</string>
-	<string name ="build_date">Mar 7, 2026 - net10</string>
+	<string name ="build_date">Mar 12, 2026 - net10</string>
 	<!--About Dialog-->
 </resources>

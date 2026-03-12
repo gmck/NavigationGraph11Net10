@@ -6,8 +6,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<ApplicationId>com.companyname.NavigationGraph11Net10</ApplicationId>
-		<ApplicationVersion>12</ApplicationVersion>
-		<ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
+		<ApplicationVersion>13</ApplicationVersion>
+		<ApplicationDisplayVersion>1.3</ApplicationDisplayVersion>
 		<RootNamespace>com.companyname.navigationgraph11net10</RootNamespace>
 		<RuntimeIdentifiers Condition=" '$(Configuration)' == 'Release' ">android-arm64</RuntimeIdentifiers>
 		<!--
@@ -39,32 +39,17 @@
 
 
 	<ItemGroup>
-		<!--
-		These packages build fine see issue #10700 for the commented packages below.
-		"See The command line for R8 Tasks is too long. Command lines longer than 32000 chars are likely to fail"
-		-->
-
-		<!--<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.1.1" />
-		<PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.9.6" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.9.6" />
-		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.1.15" />
-		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.6" />-->
-
-		<!-- 
-		These new packages below don't issue #10700 if the extra Exclude is included - Comment below to see the error
-		-->
-
 		
-		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.1.2" />
-		<PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.9.6.1" />
-		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.9.6.1" />
-		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.1.16" />
-		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.6" />
-		
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.1.3" />
+		<PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.2.0.2" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.9.7.1" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.9.7.1" />
+		<PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.1.17" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.7" />
+
+		<!--Below not required since updating to the latest versions of the above packages 11/03/2026 - but leaving here for reference if needed to resolve D8 compilation conflicts with Android variants-->
 		<!--Exclude duplicate JVM packages to resolve D8 compilation conflicts with Android variants-->
-		<PackageReference Include="Xamarin.AndroidX.Compose.Runtime.Annotation.Jvm" Version="1.10.0.1" ExcludeAssets="all" />
+		<!--<PackageReference Include="Xamarin.AndroidX.Compose.Runtime.Annotation.Jvm" Version="1.10.0.1" ExcludeAssets="all" />-->
 		
 	</ItemGroup>
 </Project>

@@ -6,7 +6,6 @@ using Android.Views;
 using Android.Widget;
 using AndroidX.Core.Content;
 using AndroidX.Preference;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace com.companyname.navigationgraph11net10.Fragments
 {

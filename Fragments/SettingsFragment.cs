@@ -1,12 +1,8 @@
 ﻿using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Views;
-using Android.Widget;
 using AndroidX.AppCompat.App;
-using AndroidX.Core.View;
 using AndroidX.Preference;
-using com.companyname.navigationgraph11net10.Classes;
 using System;
 
 namespace com.companyname.navigationgraph11net10.Fragments
@@ -156,7 +152,7 @@ namespace com.companyname.navigationgraph11net10.Fragments
         }
         #endregion
 
-        #region 
+        #region RaceResulFragmentListPreference_PreferenceChange
         private void RaceResulFragmentListPreference_PreferenceChange(object? sender, Preference.PreferenceChangeEventArgs e)
         {
             raceResultFragmentListPreference = e.Preference as RaceResultFragmentListPreference;

@@ -23,7 +23,7 @@ namespace com.companyname.navigationgraph11net10
         private bool useDynamicColors;
         private bool retainVehicleImages;
 
-        // Expose these to derived activities
+        // Expose these to the MainActivity
         protected bool UseDynamicColors => useDynamicColors;
         protected bool RetainVehicleImages => retainVehicleImages;
 
