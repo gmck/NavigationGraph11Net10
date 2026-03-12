@@ -63,8 +63,8 @@ have system colours appearance, but I'm sure most developers would agree it is s
 
 What becomes obvious once you change wallpapers or choose different colors for your system background colours is that the system Bluetooth Permission's dialog uses those colours or your wallpapers colours.
 
-Note: To see the corrected effect you will need to use the Properties Window of the app and select ``App Info``. Select Permissions for ``Nearby devices`` and then unselect ``Allow`` and select ``Don't allow``. 
-Then re run the app to see the Bluetooth Permission's dialog appear again. See the next section for how to use Dynamic Colours to make the Bluetooth Permission's dialog colours consistent with the Material3 themes used in the app.
+*Note:* To see the corrected effect you will need to use the Properties Window of the app and select ``App Info``. Select Permissions for ``Nearby devices`` and then unselect ``Allow`` and select ``Don't allow``. 
+Then re run the app and select Settings via the 3-dot menu to see the Bluetooth Permission's dialog appear again. See the next section for how to use Dynamic Colours to make the Bluetooth Permission's dialog colours consistent with the Material3 themes used in the app.
 
 **Dynamic Colours and Material3 Themes**
 
