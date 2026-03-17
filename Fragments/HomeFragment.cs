@@ -177,10 +177,10 @@ namespace com.companyname.navigationgraph11net10.Fragments
         internal void ShowAboutDialog()
         {
             string tag = "AboutDialogFragment";
-            AndroidX.Fragment.App.FragmentManager fm = Activity!.SupportFragmentManager;
+            FragmentManager fm = Activity!.SupportFragmentManager;
             if (fm != null && !fm.IsDestroyed)
             {
-                AndroidX.Fragment.App.Fragment? fragment = fm.FindFragmentByTag(tag);
+                Fragment? fragment = fm.FindFragmentByTag(tag);
                 if (fragment == null)
                     AboutDialogFragment.NewInstance().Show(fm, tag);
             }

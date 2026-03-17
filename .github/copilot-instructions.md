@@ -1,5 +1,6 @@
 # Copilot Instructions
 
 ## Project Guidelines
-- User prefers minimal code examples and does not want large or repeated snippets unless explicitly requested.
-- please don't use var.
+
+- User prefers not to use 'var' in C# code and wants explicit types; also wants to be prompted to open relevant files if none obvious, and is sensitive to squiggles/errors like unresolved 
+- Resource.Attribute values.
