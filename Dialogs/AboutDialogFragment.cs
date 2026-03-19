@@ -52,7 +52,7 @@ namespace com.companyname.navigationgraph11net10.Dialogs
             PackageInfo packageInfo;
             PackageManager packageManager = Activity!.PackageManager!;
              
-            if (OperatingSystem.IsAndroidVersionAtLeast(33))  // Api 13
+            if (OperatingSystem.IsAndroidVersionAtLeast(33))  // Android 13
                 packageInfo = packageManager.GetPackageInfo(Activity!.PackageName!, PackageManager.PackageInfoFlags.Of(PackageInfoFlagsLong.None));
             else
 #pragma warning disable CS0618 // Type or member is obsolete

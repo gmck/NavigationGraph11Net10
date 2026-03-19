@@ -67,20 +67,20 @@ namespace com.companyname.navigationgraph11net10
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-            
+
             // Require a toolbar
             toolbar = FindViewById<MaterialToolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
             // navigationView, bottomNavigationView for NavigationUI and drawerLayout for the AppBarConfiguration and NavigationUI
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            
+
             navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-            
+
             // If dynamic colors are in use, override the nav header image with a solid background, except if !RetainVehicleImages
             if (!RetainVehicleImages)
                 ApplyDynamicHeaderBackground(navigationView);
-            
+
 
             bottomNavigationView = FindViewById<BottomNavigationView>(Resource.Id.bottom_nav);
 
@@ -100,7 +100,7 @@ namespace com.companyname.navigationgraph11net10
 
             ViewCompat.SetOnApplyWindowInsetsListener(toolbar!, this);
             ViewCompat.SetOnApplyWindowInsetsListener(drawerLayout!, this);
-            
+
             // Add the DestinationChanged listener
             navController.AddOnDestinationChangedListener(this);
 
@@ -353,26 +353,6 @@ namespace com.companyname.navigationgraph11net10
                 toolbar!.Title = navDestination.Label;
                 toolbar.NavigationIcon = null;
             }
-
-            SetShortEdgesIfRequired(navDestination);
-        }
-        #endregion
-
-        #region SetShortEdgesIfRequired
-        private void SetShortEdgesIfRequired(NavDestination navDestination)
-        {
-            List<int> immersiveFragmentsDestinationIds = [Resource.Id.race_result_fragment];
-
-            // Ensure we have a window, and we are on a platform that even has the API
-            if (!OperatingSystem.IsAndroidVersionAtLeast(30) || Window == null)
-                return;
-
-            bool isImmersive = immersiveFragmentsDestinationIds.Contains(navDestination.Id);
-
-            // API 30+ only: safe for CA1416
-            Window.Attributes!.LayoutInDisplayCutoutMode =
-                isImmersive ? LayoutInDisplayCutoutMode.Always
-                            : LayoutInDisplayCutoutMode.Default;
         }
         #endregion
 

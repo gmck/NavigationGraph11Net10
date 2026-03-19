@@ -1,4 +1,9 @@
-﻿
+﻿**Build 1.4 - 19/03/2026**
+
+Removed the method SetShortEdgesIfRequired as it is no longer required. It was also preventing the correct edge-to-edge display on older devices.
+
+**Build 1.3 - 11/03/2026**
+
 NavigationGraph11Net10 is the equivalent of an update to NavigationGraph9Net9, which was uploaded to my GitHub on Dec 5, 2024. NavigationGraph9Net9 is an ``android9-android35`` app whereas NavigationGraph11Net10 
 is an ``android10-android36.1`` app. Ironically, the latest version still shows the same warnings as the previous version when uploading to the Google Play Console. 
 The warnings relate to Google Play Console's message  **Your app uses deprecated APIs or parameters for edge-to-edge.**
@@ -36,7 +41,7 @@ If the menu contains many menu items, the items should also be visible through t
 ``IOnApplyWindowInsetsListener``
 See ``WindowInsetsCompat OnApplyWindowInsets(View? v, WindowInsetsCompat? insets)`` for how to use this listener to make the contents of the NavigationView visible through the 
 StatusBar and the BottomNavigationBar and maintain the correct insets when rotating from Portrait to Landscape modes and vice versa. This is combined with the ``OnDestinationChange()`` event which 
-calls ``SetShortEdgesIfRequired(navDestination)`` for each navDestination change.  
+calls ~~``SetShortEdgesIfRequired(navDestination)``~~ for each navDestination change.  
 
 ***RecyclerViews***
 

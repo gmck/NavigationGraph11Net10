@@ -203,6 +203,6 @@
 	<string name ="about_dialog_support">Support:</string>
 	<string name ="about_dialog_security_patch_name">Security Patch</string>
 	<string name ="about_dialog_support_details">https://github.com/gmck/NavigationGraph11Net10</string>
-	<string name ="build_date">Mar 12, 2026 - net10</string>
+	<string name ="build_date">Mar 19, 2026 - net10</string>
 	<!--About Dialog-->
 </resources>
